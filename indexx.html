@@ -1,27 +1,47 @@
-<input id="input">
+ 
+</body>
+
+   <h1 align="center"style="background-color:rgb(52, 135, 52) ;color:white">Todo list</h1>
+    <input id="input">
 <button onclick="add()">Add</button>
 <ul>
     <li id="list-container">Hello
-        <button onclick="deleteItem()">Delete</button>
+        <button onclick="deleteItem(event)">Delete</button>
 
     </li>
         
-</ul>
+</ul><body>
 <script>
     var u1=document.getElementById("list-container")
     var input=document.getElementById("input")
     function add()
     {
     var listitem=document.createElement("li")
-    listitem.innerHTML=input.value + "<button onclick='deleteItem()'>Delete</button>"
+    listitem.innerHTML=input.value + "<button onclick='deleteItem(event)'>Delete</button>"
     u1.append(listitem)
     }
-    function deleteItem()
+    function deleteItem(event)
     {
         event.target.parentElement.remove()
     }
 </script>
-
+<style>
+    button{
+        background-color: rgb(101, 145, 58);
+        color:white;
+        border-radius:50px;        
+    }
+    #input
+    {
+        
+        border-radius:50px;
+        
+        height:100px;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+</style>
 
 
 
